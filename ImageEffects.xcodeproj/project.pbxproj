@@ -21,6 +21,8 @@
 		83628CBC175B25BE00E8879A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83628CBB175B25BE00E8879A /* QuartzCore.framework */; };
 		83628CC0175B262500E8879A /* typpzflatlogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 83628CBE175B262500E8879A /* typpzflatlogo.png */; };
 		83628CC1175B262500E8879A /* typpzflatlogo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83628CBF175B262500E8879A /* typpzflatlogo@2x.png */; };
+		83628CC4175B2CB200E8879A /* oldtyppzlogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 83628CC2175B2CB200E8879A /* oldtyppzlogo.png */; };
+		83628CC5175B2CB200E8879A /* oldtyppzlogo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83628CC3175B2CB200E8879A /* oldtyppzlogo@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +45,8 @@
 		83628CBB175B25BE00E8879A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		83628CBE175B262500E8879A /* typpzflatlogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = typpzflatlogo.png; sourceTree = "<group>"; };
 		83628CBF175B262500E8879A /* typpzflatlogo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "typpzflatlogo@2x.png"; sourceTree = "<group>"; };
+		83628CC2175B2CB200E8879A /* oldtyppzlogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = oldtyppzlogo.png; sourceTree = "<group>"; };
+		83628CC3175B2CB200E8879A /* oldtyppzlogo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "oldtyppzlogo@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +123,8 @@
 		83628CBD175B260A00E8879A /* images */ = {
 			isa = PBXGroup;
 			children = (
+				83628CC2175B2CB200E8879A /* oldtyppzlogo.png */,
+				83628CC3175B2CB200E8879A /* oldtyppzlogo@2x.png */,
 				83628CBE175B262500E8879A /* typpzflatlogo.png */,
 				83628CBF175B262500E8879A /* typpzflatlogo@2x.png */,
 			);
@@ -183,6 +189,8 @@
 				83628CB5175B22C400E8879A /* ViewController.xib in Resources */,
 				83628CC0175B262500E8879A /* typpzflatlogo.png in Resources */,
 				83628CC1175B262500E8879A /* typpzflatlogo@2x.png in Resources */,
+				83628CC4175B2CB200E8879A /* oldtyppzlogo.png in Resources */,
+				83628CC5175B2CB200E8879A /* oldtyppzlogo@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

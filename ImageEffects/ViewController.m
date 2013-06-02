@@ -13,7 +13,7 @@
 @end
 
 @implementation ViewController
-@synthesize effectedImage, addShadow, rippleEffect;
+@synthesize effectedImage, addShadow, rippleEffect, imageTransition;
 
 - (void)viewDidLoad
 {
@@ -41,6 +41,18 @@
         self.effectedImage.layer.shadowColor = [UIColor blackColor].CGColor;
     }];
 
+}
+
+- (IBAction)imageTransition:(id)sender {
+    int i = 0;
+    self.effectedImage.image = [UIImage imageNamed:(i % 2) ? @"typpzflatlogo" : @"oldtyppzlogo"];
+    
+    CATransition *transition = [CATransition animation];
+    transition.duration = 1.0f;
+    transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    transition.type = kCATransitionFade;
+    
+    [self.effectedImage.layer addAnimation:transition forKey:nil];
 }
 
 - (void)didReceiveMemoryWarning
