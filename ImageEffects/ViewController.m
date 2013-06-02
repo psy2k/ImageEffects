@@ -13,7 +13,8 @@
 @end
 
 @implementation ViewController
-@synthesize effectedImage, addShadow, rippleEffect, imageTransition;
+@synthesize effectedImage, addShadow, rippleEffect, imageTransition, resetButton;
+BOOL hasEffects = NO;
 
 - (void)viewDidLoad
 {
@@ -33,14 +34,24 @@
 }
 
 - (IBAction)addShadow:(id)sender {
+    if (hasEffects == NO){
+            hasEffects = YES;
     [UIView animateWithDuration:1.5 animations:^(void) {
         self.effectedImage.alpha = 1;
         self.effectedImage.layer.shadowOpacity = 0.8;
         self.effectedImage.layer.shadowOffset =  CGSizeMake(0, 0);
         self.effectedImage.layer.shadowRadius = 5;
         self.effectedImage.layer.shadowColor = [UIColor blackColor].CGColor;
+        [self.addShadow setTitle:@"Remove Shadow" forState:UIControlStateNormal];
     }];
-
+     
+    } else {
+        hasEffects = NO;
+        [UIView animateWithDuration:1.5 animations:^(void) {
+            self.effectedImage.layer.shadowOpacity = 0.0;
+            [self.addShadow setTitle:@"Add Shadow" forState:UIControlStateNormal];
+        }];
+    }
 }
 
 - (IBAction)imageTransition:(id)sender {
@@ -53,6 +64,9 @@
     transition.type = kCATransitionFade;
     
     [self.effectedImage.layer addAnimation:transition forKey:nil];
+}
+- (IBAction)resetEffects:(id)sender {
+    self.effectedImage.layer.shadowOpacity = 0.0;
 }
 
 - (void)didReceiveMemoryWarning
