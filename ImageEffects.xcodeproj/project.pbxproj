@@ -18,6 +18,9 @@
 		83628CAF175B22C400E8879A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83628CAE175B22C400E8879A /* Default-568h@2x.png */; };
 		83628CB2175B22C400E8879A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83628CB1175B22C400E8879A /* ViewController.m */; };
 		83628CB5175B22C400E8879A /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83628CB3175B22C400E8879A /* ViewController.xib */; };
+		83628CBC175B25BE00E8879A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83628CBB175B25BE00E8879A /* QuartzCore.framework */; };
+		83628CC0175B262500E8879A /* typpzflatlogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 83628CBE175B262500E8879A /* typpzflatlogo.png */; };
+		83628CC1175B262500E8879A /* typpzflatlogo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83628CBF175B262500E8879A /* typpzflatlogo@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +40,9 @@
 		83628CB0175B22C400E8879A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		83628CB1175B22C400E8879A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		83628CB4175B22C400E8879A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		83628CBB175B25BE00E8879A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		83628CBE175B262500E8879A /* typpzflatlogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = typpzflatlogo.png; sourceTree = "<group>"; };
+		83628CBF175B262500E8879A /* typpzflatlogo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "typpzflatlogo@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83628CBC175B25BE00E8879A /* QuartzCore.framework in Frameworks */,
 				83628C99175B22C400E8879A /* UIKit.framework in Frameworks */,
 				83628C9B175B22C400E8879A /* Foundation.framework in Frameworks */,
 				83628C9D175B22C400E8879A /* CoreGraphics.framework in Frameworks */,
@@ -73,6 +80,7 @@
 		83628C97175B22C400E8879A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				83628CBB175B25BE00E8879A /* QuartzCore.framework */,
 				83628C98175B22C400E8879A /* UIKit.framework */,
 				83628C9A175B22C400E8879A /* Foundation.framework */,
 				83628C9C175B22C400E8879A /* CoreGraphics.framework */,
@@ -83,6 +91,7 @@
 		83628C9E175B22C400E8879A /* ImageEffects */ = {
 			isa = PBXGroup;
 			children = (
+				83628CBD175B260A00E8879A /* images */,
 				83628CA7175B22C400E8879A /* AppDelegate.h */,
 				83628CA8175B22C400E8879A /* AppDelegate.m */,
 				83628CB0175B22C400E8879A /* ViewController.h */,
@@ -105,6 +114,15 @@
 				83628CAE175B22C400E8879A /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		83628CBD175B260A00E8879A /* images */ = {
+			isa = PBXGroup;
+			children = (
+				83628CBE175B262500E8879A /* typpzflatlogo.png */,
+				83628CBF175B262500E8879A /* typpzflatlogo@2x.png */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,6 +181,8 @@
 				83628CAD175B22C400E8879A /* Default@2x.png in Resources */,
 				83628CAF175B22C400E8879A /* Default-568h@2x.png in Resources */,
 				83628CB5175B22C400E8879A /* ViewController.xib in Resources */,
+				83628CC0175B262500E8879A /* typpzflatlogo.png in Resources */,
+				83628CC1175B262500E8879A /* typpzflatlogo@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

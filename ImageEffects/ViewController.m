@@ -13,12 +13,25 @@
 @end
 
 @implementation ViewController
+@synthesize effectedImage;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.effectedImage.image = [UIImage imageNamed:@"typpzflatlogo"];
 	// Do any additional setup after loading the view, typically from a nib.
 }
+
+- (IBAction)rippleEffect:(id)sender {
+    CATransition *animation = [CATransition animation];
+    [animation setDelegate:self];
+    [animation setDuration:1.5f];
+    //    [animation setTimingFunction: UIViewAnimationCurveEaseInOut];
+    //    [animation setTimingFunction: [CAMediaTimingFunction UIViewAnimationCurveEaseInOut]];
+    [animation setType:@"rippleEffect" ];
+    [self.effectedImage.layer addAnimation:animation forKey:NULL];
+}
+
 
 - (void)didReceiveMemoryWarning
 {

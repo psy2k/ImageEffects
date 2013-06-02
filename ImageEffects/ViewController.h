@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <QuartzCore/QuartzCore.h>
 
 @interface ViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UIImageView *effectedImage;
+
+@property (strong, nonatomic) IBOutlet UIButton *rippleEffect;
 @end
