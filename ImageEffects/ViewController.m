@@ -13,8 +13,9 @@
 @end
 
 @implementation ViewController
-@synthesize effectedImage, addShadow, rippleEffect, imageTransition, resetButton;
+@synthesize effectedImage, addShadow, rippleEffect, imageTransition, resetButton, spinButton;
 BOOL hasEffects = NO;
+BOOL isSpin = NO;
 
 - (void)viewDidLoad
 {
@@ -65,14 +66,35 @@ BOOL hasEffects = NO;
     
     [self.effectedImage.layer addAnimation:transition forKey:nil];
 }
+
 - (IBAction)resetEffects:(id)sender {
     self.effectedImage.layer.shadowOpacity = 0.0;
+    [self.effectedImage.layer removeAllAnimations];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)startSpin:(id)sender {
+    if (!isSpin){
+        isSpin = YES;
+        CABasicAnimation *spin;
+        spin = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
+        spin.fromValue = [NSNumber numberWithFloat:0];
+        spin.toValue = [NSNumber numberWithFloat:(2*M_PI)];
+        spin.duration = 0.8; // How fast should the image spin
+        spin.repeatCount = HUGE_VALF; // HUGE_VALF means infinite repeatCount
+        [self.spinButton setTitle:@"Stop spinning" forState:UIControlStateNormal];
+        [self.effectedImage.layer addAnimation:spin forKey:@"Spin"];
+    } else {
+        isSpin = NO;
+        [self.effectedImage.layer removeAnimationForKey:@"Spin"];
+        [self.spinButton setTitle:@"Spin" forState:UIControlStateNormal];
+        
+    }
 }
 
 @end

@@ -17,4 +17,6 @@
 @property (strong, nonatomic) IBOutlet UIButton *addShadow;
 @property (strong, nonatomic) IBOutlet UIButton *imageTransition;
 @property (strong, nonatomic) IBOutlet UIButton *resetButton;
+@property (strong, nonatomic) IBOutlet UIButton *spinButton;
+
 @end
