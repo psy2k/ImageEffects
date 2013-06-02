@@ -14,4 +14,5 @@
 @property (strong, nonatomic) IBOutlet UIImageView *effectedImage;
 
 @property (strong, nonatomic) IBOutlet UIButton *rippleEffect;
+@property (strong, nonatomic) IBOutlet UIButton *addShadow;
 @end

@@ -13,7 +13,7 @@
 @end
 
 @implementation ViewController
-@synthesize effectedImage;
+@synthesize effectedImage, addShadow, rippleEffect;
 
 - (void)viewDidLoad
 {
@@ -32,6 +32,16 @@
     [self.effectedImage.layer addAnimation:animation forKey:NULL];
 }
 
+- (IBAction)addShadow:(id)sender {
+    [UIView animateWithDuration:1.5 animations:^(void) {
+        self.effectedImage.alpha = 1;
+        self.effectedImage.layer.shadowOpacity = 0.8;
+        self.effectedImage.layer.shadowOffset =  CGSizeMake(0, 0);
+        self.effectedImage.layer.shadowRadius = 5;
+        self.effectedImage.layer.shadowColor = [UIColor blackColor].CGColor;
+    }];
+
+}
 
 - (void)didReceiveMemoryWarning
 {
