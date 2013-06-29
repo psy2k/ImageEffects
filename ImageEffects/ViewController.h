@@ -18,5 +18,6 @@
 @property (strong, nonatomic) IBOutlet UIButton *imageTransition;
 @property (strong, nonatomic) IBOutlet UIButton *resetButton;
 @property (strong, nonatomic) IBOutlet UIButton *spinButton;
+@property (strong, nonatomic) IBOutlet UIButton *changePositionButton;
 
 @end

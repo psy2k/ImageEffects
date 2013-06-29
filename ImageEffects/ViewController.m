@@ -17,10 +17,14 @@
 BOOL hasEffects = NO;
 BOOL isSpin = NO;
 
+// We will save the original position of the image to this variable
+CGFloat originalPosition;
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     self.effectedImage.image = [UIImage imageNamed:@"typpzflatlogo"];
+    originalPosition = self.effectedImage.layer.position.y;
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -70,6 +74,9 @@ BOOL isSpin = NO;
 - (IBAction)resetEffects:(id)sender {
     self.effectedImage.layer.shadowOpacity = 0.0;
     [self.effectedImage.layer removeAllAnimations];
+    
+    // Here we set the y value again to the default one in case we've pressed the change position button
+    self.effectedImage.layer.position = CGPointMake(self.effectedImage.layer.position.x, originalPosition);
 }
 
 - (void)didReceiveMemoryWarning
@@ -95,6 +102,15 @@ BOOL isSpin = NO;
         [self.spinButton setTitle:@"Spin" forState:UIControlStateNormal];
         
     }
+}
+
+- (IBAction)changePostion:(id)sender {
+    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"position.y"];
+    animation.toValue = @300.0;
+    animation.duration = 1.0;
+    animation.repeatCount = HUGE_VALF;
+    [self.effectedImage.layer addAnimation:animation forKey:@"positionAnimation"];    
+
 }
 
 @end
