@@ -19,7 +19,5 @@
 @property (strong, nonatomic) IBOutlet UIButton *resetButton;
 @property (strong, nonatomic) IBOutlet UIButton *spinButton;
 @property (strong, nonatomic) IBOutlet UIButton *changePositionButton;
-@property (strong, nonatomic) IBOutlet UIButton *gravityButton;
-@property (strong, nonatomic) UIDynamicAnimator *animator;
 
 @end
