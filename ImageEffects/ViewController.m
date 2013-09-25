@@ -106,7 +106,6 @@ CGFloat originalPositionX;
     }
 }
 
-
 - (IBAction)changePostion:(id)sender {
     CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"position.y"];
     animation.toValue = @300.0;
@@ -115,7 +114,6 @@ CGFloat originalPositionX;
     [self.effectedImage.layer addAnimation:animation forKey:@"positionAnimation"];    
 
 }
-
 
 - (IBAction)addGravity:(id)sender {
     self.animator = [[UIDynamicAnimator alloc] initWithReferenceView:self.effectedImage];
