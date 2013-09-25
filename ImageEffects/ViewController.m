@@ -13,18 +13,20 @@
 @end
 
 @implementation ViewController
-@synthesize effectedImage, addShadow, rippleEffect, imageTransition, resetButton, spinButton;
+@synthesize effectedImage, addShadow, rippleEffect, imageTransition, resetButton, spinButton, gravityButton, animator;
 BOOL hasEffects = NO;
 BOOL isSpin = NO;
 
 // We will save the original position of the image to this variable
-CGFloat originalPosition;
+CGFloat originalPositionY;
+CGFloat originalPositionX;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     self.effectedImage.image = [UIImage imageNamed:@"typpzflatlogo"];
-    originalPosition = self.effectedImage.layer.position.y;
+    originalPositionX = self.effectedImage.layer.position.x;
+    originalPositionY = self.effectedImage.layer.position.y;
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -76,7 +78,7 @@ CGFloat originalPosition;
     [self.effectedImage.layer removeAllAnimations];
     
     // Here we set the y value again to the default one in case we've pressed the change position button
-    self.effectedImage.layer.position = CGPointMake(self.effectedImage.layer.position.x, originalPosition);
+    self.effectedImage.layer.position = CGPointMake(originalPositionX, originalPositionY);
 }
 
 - (void)didReceiveMemoryWarning
@@ -111,6 +113,13 @@ CGFloat originalPosition;
     animation.repeatCount = HUGE_VALF;
     [self.effectedImage.layer addAnimation:animation forKey:@"positionAnimation"];    
 
+}
+
+- (IBAction)addGravity:(id)sender {
+    self.animator = [[UIDynamicAnimator alloc] initWithReferenceView:self.effectedImage];
+    UISnapBehavior *snapBehaviour = [[UISnapBehavior alloc] initWithItem:self.effectedImage snapToPoint:self.view.center];
+    snapBehaviour.damping = 0.35f;
+    [self.animator addBehavior:snapBehaviour];
 }
 
 @end
