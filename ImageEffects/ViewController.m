@@ -92,8 +92,8 @@ CGFloat originalPositionX;
         isSpin = YES;
         CABasicAnimation *spin;
         spin = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
-        spin.fromValue = [NSNumber numberWithFloat:0];
-        spin.toValue = [NSNumber numberWithFloat:(2*M_PI)];
+        spin.fromValue = @0.0f;
+        spin.toValue = @(2*M_PI);
         spin.duration = 0.8; // How fast should the image spin
         spin.repeatCount = HUGE_VALF; // HUGE_VALF means infinite repeatCount
         [self.spinButton setTitle:@"Stop spinning" forState:UIControlStateNormal];
