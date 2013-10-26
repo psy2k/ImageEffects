@@ -13,7 +13,7 @@
 @end
 
 @implementation ViewController
-@synthesize effectedImage, addShadow, rippleEffect, imageTransition, resetButton, spinButton, gravityButton, animator;
+@synthesize effectedImage, addShadow, rippleEffect, imageTransition, resetButton, spinButton, gravityButton, animator, scaleBtn;
 BOOL hasEffects = NO;
 BOOL isSpin = NO;
 
@@ -59,6 +59,16 @@ CGFloat originalPositionX;
             [self.addShadow setTitle:@"Add Shadow" forState:UIControlStateNormal];
         }];
     }
+}
+- (IBAction)scaleTransition:(id)sender {
+    self.effectedImage.transform = CGAffineTransformMakeScale(0.01, 0.01);
+    [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+        // animate it to the full transform (100% scale)
+        self.effectedImage.transform = CGAffineTransformIdentity;
+    } completion:^(BOOL finished){
+        // Put here any code you like to be executed after animationc completion
+        NSLog(@"Image scaled %@", @"Image scaled");
+    }];
 }
 
 - (IBAction)imageTransition:(id)sender {

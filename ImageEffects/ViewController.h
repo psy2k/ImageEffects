@@ -21,5 +21,6 @@
 @property (strong, nonatomic) IBOutlet UIButton *changePositionButton;
 @property (strong, nonatomic) IBOutlet UIButton *gravityButton;
 @property (strong, nonatomic) UIDynamicAnimator *animator;
+@property (strong, nonatomic) IBOutlet UIButton *scaleBtn;
 
 @end
