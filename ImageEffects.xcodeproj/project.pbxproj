@@ -288,6 +288,7 @@
 		83628CB9175B22C400E8879A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ImageEffects/ImageEffects-Prefix.pch";
 				INFOPLIST_FILE = "ImageEffects/ImageEffects-Info.plist";
@@ -300,6 +301,7 @@
 		83628CBA175B22C400E8879A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ImageEffects/ImageEffects-Prefix.pch";
 				INFOPLIST_FILE = "ImageEffects/ImageEffects-Info.plist";
